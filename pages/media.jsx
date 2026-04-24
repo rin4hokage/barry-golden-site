@@ -67,23 +67,14 @@ function MediaPage() {
 
       <section className="bg-section narrow">
         <SectionHead eyebrow="Photography" title="The Gallery" />
-        <div className="bg-filter-row">
-          {filters.map(f => (
-            <button key={f} className={`bg-filter-pill${activeFilter === f ? ' active' : ''}`}
-              onClick={() => setActiveFilter(f)}>{f}</button>
-          ))}
-        </div>
-        <div className="bg-gallery">
-          {photos.map(p => (
-            <div key={p.id} className="bg-photo">
-              <span className="p-tag">{p.tag}</span>
-              <span>[ PHOTO {String(p.id).padStart(2, '0')} ]</span>
-            </div>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: 44 }}>
-          <a href="#" className="bg-btn">Load More</a>
-        </div>
+        <ExpandCards items={[
+          { tag: 'LIVE', label: '[ Live Performance ]' },
+          { tag: 'STUDIO', label: '[ Studio Session ]' },
+          { tag: 'PORTRAIT', label: '[ Portrait ]' },
+          { tag: 'BTS', label: '[ Behind The Scenes ]' },
+          { tag: 'LIVE', label: '[ Live Performance ]' },
+          { tag: 'PORTRAIT', label: '[ Portrait ]' },
+        ]} />
       </section>
 
       <GoldDivider />

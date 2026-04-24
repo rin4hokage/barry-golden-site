@@ -106,9 +106,6 @@ function Nav() {
         </ul>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <a href="#" className="bg-nav-cta" onClick={(e) => {e.preventDefault();navigate('booking');}}>
-            Book the Band
-          </a>
           <button className="bg-hamburger" onClick={() => setMenuOpen((o) => !o)} aria-label="Menu">
             <span></span><span></span><span></span>
           </button>

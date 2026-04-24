@@ -7,7 +7,14 @@ function HomePage() {
       {/* Hero */}
       <section className="bg-hero-fullbleed">
         <div className="bg-hero-img-slot">
-          <img src="hero.png" alt="BG Barry Golden and the Velocity Band performing live" />
+          <BreathingGradient
+            colors={['#0F0520', '#3A0D7A', '#5C1A9E', 'rgba(212,175,55,0.15)', 'transparent']}
+            stops={[0, 25, 50, 75, 100]}
+            speed={0.012}
+            range={8}
+            startGap={115}
+          />
+          <img src="hero.png" alt="BG Barry Golden and the Velocity Band performing live" style={{ position: 'relative', zIndex: 1 }} />
         </div>
         <div className="bg-hero-overlay-left" />
         <div className="bg-hero-overlay-bottom" />
@@ -35,8 +42,6 @@ function HomePage() {
           <span>Booking Open · 2026</span>
         </div>
       </section>
-
-      <Marquee />
 
       <GoldDivider />
 
