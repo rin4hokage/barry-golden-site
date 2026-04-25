@@ -64,63 +64,6 @@ function HomePage() {
       </section>
 
       <GoldDivider />
-
-      {/* Tour dates */}
-      <section className="bg-section narrow reveal">
-        <SectionHead eyebrow="On The Road" title="Upcoming Dates" />
-        <div className="bg-tour-list">
-          {[
-            { mo: 'May', dy: '17', wd: 'Sat', venue: '[ VENUE NAME ]', city: '' },
-            { mo: 'Jun', dy: '04', wd: 'Wed', venue: '[ VENUE NAME ]', city: '' },
-            { mo: 'Jun', dy: '21', wd: 'Sat', venue: '[ PRIVATE EVENT ]', city: '' },
-            { mo: 'Jul', dy: '12', wd: 'Sat', venue: '[ FESTIVAL MAIN STAGE ]', city: '' },
-          ].map((r, i) => (
-            <div key={i} className="bg-tour-row">
-              <div className="bg-tour-date">
-                <span className="day">{r.wd}</span>
-                <em>{r.mo}</em> {r.dy}
-              </div>
-              <div>
-                <div className="bg-tour-venue">{r.venue}</div>
-                {r.city && <div className="bg-tour-city">{r.city}</div>}
-              </div>
-              <a href="#" className="bg-btn small">Tickets</a>
-            </div>
-          ))}
-        </div>
-        <div style={{ textAlign: 'center', marginTop: 44 }}>
-          <a href="#" className="bg-btn">View Full Calendar</a>
-        </div>
-      </section>
-
-      <GoldDivider />
-
-      {/* Latest release */}
-      <section className="bg-section narrow reveal">
-        <SectionHead eyebrow="New From The Studio" title="Latest Release" />
-        <div className="bg-two-col">
-          <div style={{ maxWidth: 440 }}>
-            <div className="bg-album">
-              <div className="al-title">[ ALBUM TITLE ]</div>
-            </div>
-          </div>
-          <div>
-            <div style={{ marginBottom: 12 }}><Eyebrow>Single · Released [ MONTH YEAR ]</Eyebrow></div>
-            <h2 style={{ fontSize: 48, color: 'var(--ivory)', fontStyle: 'italic', fontWeight: 400, lineHeight: 1.05, marginBottom: 20 }}>
-              [ Track Title ]
-            </h2>
-            <p style={{ color: 'var(--ivory-muted)', fontSize: 15, lineHeight: 1.8, marginBottom: 10 }}>
-              {"\n"}
-            </p>
-            <div className="bg-stream-row">
-              <a href="#" className="bg-stream"><span className="dot"></span> Spotify</a>
-              <a href="#" className="bg-stream"><span className="dot"></span> Apple Music</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <GoldDivider />
       <FinalCTA />
       <Footer />
     </div>

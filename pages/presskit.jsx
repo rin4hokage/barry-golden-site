@@ -7,13 +7,6 @@ function PressKitPage() {
     { icon: '¶', title: 'Hi-Res Promo Photos', meta: 'ZIP · Available on request', desc: 'Live, studio, and portrait imagery cleared for press and promoter use.' },
   ];
 
-  const facts = [
-    { label: 'Band Size', value: '' },
-    { label: 'Genres', value: '' },
-    { label: 'Performance Length', value: '' },
-    { label: 'Based In', value: '' },
-  ];
-
   return (
     <div className="bg-page">
       <Nav />
@@ -35,20 +28,6 @@ function PressKitPage() {
             <a href="mailto:booking@barrygolden.com" className="bg-btn small">Request</a>
           </div>
         ))}
-      </section>
-
-      <GoldDivider />
-
-      <section className="bg-section narrow">
-        <SectionHead eyebrow="At A Glance" title="Quick Facts" />
-        <div className="bg-facts">
-          {facts.map((f, i) => (
-            <div key={i} className="bg-fact">
-              <div><Eyebrow>{f.label}</Eyebrow></div>
-              <div className="value" style={{ marginTop: 10 }}>{f.value}</div>
-            </div>
-          ))}
-        </div>
       </section>
 
       <GoldDivider />
